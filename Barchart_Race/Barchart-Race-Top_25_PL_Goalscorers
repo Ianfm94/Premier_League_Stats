@@ -1,5 +1,7 @@
 rm(list=ls())
 
+# Below copied is copied & slightly modified from https://github.com/corydonbaylor/barchart-race.
+
 #install.packages('gganimate')
 #install.packages('gapminder')
 #install.packages('gifski')
