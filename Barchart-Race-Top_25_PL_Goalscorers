@@ -80,7 +80,7 @@ make_barchart_race <- function(data,x,y,
 #Example usage:
 
 #read in a dataset:
-data = read_csv("C:\\Users\\Ianm9\\OneDrive\\Desktop\\P_Drive\\Data_Analysis\\Sports_Analysis\\Soccer\\Premier_League\\Premier League Goal Scorers Season by Season.csv")
+data = read_csv("Premier League Goal Scorers Season by Season.csv")
 #View(data)
 
 #call the function to make the animation:
@@ -90,4 +90,4 @@ make_barchart_race(data,
                    title="Top PL Goalscorers Season by Season",
                    caption="Source: Fantasy PL Website")
 #save it:
-anim_save("C:\\Users\\Ianm9\\OneDrive\\Desktop\\P_Drive\\Data_Analysis\\Sports_Analysis\\Soccer\\Premier_League\\PL_90's_Goalscorers.gif")
+anim_save("PL_90's_Goalscorers.gif")
