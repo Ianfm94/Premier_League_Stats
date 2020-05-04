@@ -1,0 +1,93 @@
+rm(list=ls())
+
+#install.packages('gganimate')
+#install.packages('gapminder')
+#install.packages('gifski')
+#install.packages("ggthemes") # Install 
+
+#load required packages:
+library(tidyverse)
+library(gganimate)
+library(gapminder)
+library(gifski)
+library(ggthemes)
+
+#inputs:
+#data - the dataset, must contain a column called "year"
+#x - the column which contains the numeric value to plot 
+#y - the column which contains the labels of the plot
+
+#optional: 
+#title - title to show at the top of the graph, defaults to blank
+#caption - text show in footer, defaults to blank
+#number - filter to top "number" defaults to 10 for top 10 in each period
+#parameters passed to "animate" function: defaults to nframes=300, fps=5, end_pause=20
+
+make_barchart_race <- function(data,x,y,
+                               number=25,
+                               title="",
+                               caption="",
+                               nframes=300,
+                               fps=5,
+                               end_pause=15){
+  #set up variables for use with tidy evaluation
+  y <- rlang::enquo(y)
+  x <- rlang::enquo(x)
+  number <- rlang::enquo(number)
+  
+  #take the input dataset, compute ranks within each time period
+  data %>%
+    group_by(Season) %>%
+    arrange(-!!y) %>%
+    mutate(rank=row_number()) %>%
+    #filter to top "number"
+    filter(rank<=!!number) -> data
+  
+  #plot the data
+  data %>%
+    ggplot(aes(x=-rank,y=!!y,fill=!!x, group=!!x),) +
+    geom_tile(aes(y=!!y/2,height=!!y+0.25),width=1,show.legend = F)+
+    geom_text(aes(label=!!x),
+              hjust="right",
+              colour="black",
+              fontface="bold",
+              nudge_y=0)+
+    geom_text(aes(label=scales::comma(!!y)),
+              hjust="left",
+              nudge_y=1,
+              colour="grey30")+
+    theme_minimal() +
+    coord_flip(clip="off") +
+    scale_x_discrete("") +
+    scale_y_continuous("",labels=scales::comma)+
+    theme(panel.grid.major.y=element_blank(),
+          panel.grid.minor.x=element_blank(),
+          panel.background = element_rect(fill = "lightblue"),
+          plot.title= element_text(size=20,colour="black",face="bold"),
+          plot.caption = element_text(colour="Black"),
+          plot.subtitle = element_text(size=20,colour="navy",face="bold"),
+          axis.text.y=element_blank())+
+    #this bit does the animation by year
+    transition_time(Season) +
+    labs(title=title,
+         subtitle='{round(frame_time,0)}',
+         caption=caption)-> p
+  
+  #animate the plot - this is returned by the function
+  animate(p, nframes = nframes, fps = fps, end_pause = end_pause)
+}
+
+#Example usage:
+
+#read in a dataset:
+data = read_csv("C:\\Users\\Ianm9\\OneDrive\\Desktop\\P_Drive\\Data_Analysis\\Sports_Analysis\\Soccer\\Premier_League\\Premier League Goal Scorers Season by Season.csv")
+#View(data)
+
+#call the function to make the animation:
+make_barchart_race(data,
+                   Player,
+                   Goals,
+                   title="Top PL Goalscorers Season by Season",
+                   caption="Source: Fantasy PL Website")
+#save it:
+anim_save("C:\\Users\\Ianm9\\OneDrive\\Desktop\\P_Drive\\Data_Analysis\\Sports_Analysis\\Soccer\\Premier_League\\PL_90's_Goalscorers.gif")
