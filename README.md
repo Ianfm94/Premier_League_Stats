@@ -9,6 +9,6 @@ This repository is made up of two folders:
   An interactive graph of the top 20 Premier League Top Fantasy Point Scorers is saved at the below location, it's broken down by player     position and colour coded by each player's team:
   
   https://ianfm94.github.io/Premier_League_Stats/TOP_20_Fantasy_PL_Pointscorers.html
-  https://ianfm94.github.io/Premier_League_Stats/Top_100_Fantasy_PL_Pointscorers.html
+  https://ianfm94.github.io/Premier_League_Stats/Top_100_Fantasy_PL_Pointscorers.html 
   https://ianfm94.github.io/Premier_League_Stats/Man_United_Fantasy_PL_Pointscorers.html
   
