@@ -3,21 +3,19 @@
 This repository is made up of four subfolders:
  
  ## Barchart Race Folder ##
-  This folder includes a (really bad, I need to update this) Barchart Race \
-  detailing the TOP 25 PL Goalscorers on a season by season basis and a CSV \
-  file with the data needed to make the Barchart Race.
+  This folder includes a (really bad, I need to update this) Barchart Race detailing the TOP 25 PL Goalscorers on a season  \
+  by season basis and a CSV file with the data needed to make the Barchart Race.
  
  ## CSV Files ##
-  This folder includes some CSV files which include weekly FPL data webscraped \
-  from the FPL website. Will be updated weekly going forward.
+  This folder includes some CSV files which include weekly FPL data webscraped from the FPL website. Will be updated weekly \
+  going forward.
   
  ## Stats ##
-  This folder includes two csv files with the current top goalscorers and the \
-  current top assist makers in the PL (as of 10/06/20).
-  
-  ![](C:\Users\Ianm9\OneDrive\Desktop\P_Drive\Data_Analysis\Sports_Analysis\Soccer\Premier_League\Goals&Assists\Assists.png)
-  ![](C:\Users\Ianm9\OneDrive\Desktop\P_Drive\Data_Analysis\Sports_Analysis\Soccer\Premier_League\Goals&Assists\Combined_G&A.png)
-  ![](C:\Users\Ianm9\OneDrive\Desktop\P_Drive\Data_Analysis\Sports_Analysis\Soccer\Premier_League\Goals&Assists\Goals.png)
+  This folder includes two csv files with the current top goalscorers and the current top assist makers in the PL (as of 10/06/20).
+ 
+  ![Goals](https://github.com/Ianfm94/Premier_League_Stats/blob/master/Stats/Goals.png)
+  ![Assists](https://github.com/Ianfm94/Premier_League_Stats/blob/master/Stats/Assists.png)
+  ![G&A](https://github.com/Ianfm94/Premier_League_Stats/blob/master/Stats/Combined_G%26A.png)
   
  ## Fantasy_Football ##
   This folder contains three interactive graphs:
