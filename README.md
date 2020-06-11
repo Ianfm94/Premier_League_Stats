@@ -18,10 +18,11 @@ This repository is made up of four subfolders:
   ![G&A](https://github.com/Ianfm94/Premier_League_Stats/blob/master/Stats/Combined_G%26A.png)
   
  ## Fantasy_Football ##
-  This folder contains three interactive graphs:
-   One of the top 20 Premier League Fantasy Point Scorers so far this season.
-   One of the top 100 Premier League Fantasy Point Scorers so far this season.
-   One of the Manchester United Fantasy Point Scorers so far this season.
+  This folder contains three interactive graphs and the R code on how to create the aforementioned graphs:
+  
+  One of the top 20 Premier League Fantasy Point Scorers so far this season.
+  One of the top 100 Premier League Fantasy Point Scorers so far this season.
+  One of the Manchester United Fantasy Point Scorers so far this season.
    
    See links below:
    
