@@ -11,7 +11,10 @@ This repository is made up of four subfolders:
   going forward.
   
  ## Stats ##
-  This folder includes two csv files with the current top goalscorers and the current top assist makers in the PL (as of 10/06/20).
+  This folder includes two csv files and the R script on how to make the below three graphs:
+  * One of the csv fildes contains the current top goalscorers & the current top combined players with goals & assists.
+  * The other csv file includes the current top assist makers in the PL.
+  * Both files data is of 10/06/2020.
  
   ![Goals](https://github.com/Ianfm94/Premier_League_Stats/blob/master/Stats/Goals.png)
   ![Assists](https://github.com/Ianfm94/Premier_League_Stats/blob/master/Stats/Assists.png)
