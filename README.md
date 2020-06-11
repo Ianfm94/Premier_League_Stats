@@ -25,7 +25,7 @@ This repository is made up of four subfolders:
    
    See links below:
    
-    https://ianfm94.github.io/Premier_League_Stats/Fantasy_Football/TOP_20_Fantasy_PL_Pointscorers.html
+    https://ianfm94.github.io/Premier_League_Stats/Fantasy_Football/Top_20_Fantasy_PL_Pointscorers.html
     https://ianfm94.github.io/Premier_League_Stats/Fantasy_Football/Top_100_Fantasy_PL_Pointscorers.html 
     https://ianfm94.github.io/Premier_League_Stats/Fantasy_Football/Man_United_Fantasy_PL_Pointscorers.html
  
