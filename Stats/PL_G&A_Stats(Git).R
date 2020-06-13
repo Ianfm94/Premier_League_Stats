@@ -4,7 +4,7 @@ library(ggplot2)
 library(wesanderson)
 library(viridis)
 library(forcats)
-library(Rcurl)
+library(RCurl)
 
 # Part 1: Top 30 Goalscorers
 
@@ -25,7 +25,8 @@ plot_1 =
   ggplot(goals_df, 
          mapping = aes(y = top_30_goals,
                        x = fct_reorder(top_30_player, - top_30_goals),
-                       fill = as.numeric(top_30_player)))+
+                       fill = as.numeric(fct_reorder(top_30_player,
+                                                     - top_30_goals)))) +
   geom_col() +
   coord_flip() + 
   scale_fill_gradient("blue") +
@@ -47,8 +48,8 @@ plot_1
 
 combined = read.csv('Premier League Top Goal Scorers.csv',
                     header = T, fileEncoding = "UTF-8-BOM")
-#View(combined)
 attach(combined)
+#View(combined)
 
 top_30_combined_player = Player[0:30]
 top_30_combined = Combined_Goals_and_Assists[0:30]
@@ -60,8 +61,9 @@ combined_df = data.frame(y = top_30_combined_player,
 plot_2 = 
   ggplot(combined_df, 
          mapping = aes(y = top_30_combined, 
-                       x = fct_reorder(top_30_combined_player, - top_30_combined), 
-                       fill = as.numeric(top_30_combined_player)))+
+                       x = fct_reorder(top_30_combined_player, - top_30_combined),
+                       fill = as.numeric(fct_reorder(top_30_combined_player,
+                                - top_30_combined)))) +
   geom_col()+
   coord_flip() + 
   scale_fill_gradient("blue") +
@@ -99,7 +101,8 @@ plot_3 =
   ggplot(assists_df, 
          mapping = aes(y = top_30_assists, 
                        x = fct_reorder(top_30_player, - top_30_assists), 
-                       fill = as.numeric(top_30_player)))+
+                       fill = as.numeric(fct_reorder(top_30_player,
+                                                     - top_30_assists))))+
   geom_col()+
   coord_flip() + 
   scale_fill_gradient("blue") +
