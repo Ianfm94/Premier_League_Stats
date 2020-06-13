@@ -17,7 +17,7 @@ This repository is made up of four subfolders:
   * Both files data is of 10/06/2020.
  
   ![Goals](https://github.com/Ianfm94/Premier_League_Stats/blob/master/Stats/Goals.png)
-  ![Assists](https://github.com/Ianfm94/Premier_League_Stats/blob/master/Stats/Assists.png)
+  ![Assists](https://github.com/Ianfm94/Premier_League_Stats/blob/master/Stats/Assist.png)
   ![G&A](https://github.com/Ianfm94/Premier_League_Stats/blob/master/Stats/Combined_G%26A.png)
   
  ## Fantasy_Football ##
